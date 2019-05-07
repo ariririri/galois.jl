@@ -1,5 +1,5 @@
 import Base: +, -, *
-import Base: gcd
+import Base: gcd, isequal
 
 struct Poly{T}
   a::Vector{T}
@@ -18,6 +18,10 @@ struct Poly{T}
       end
     end
   end
+end
+
+function isequal(f::Poly, q::Poly)
+  return f.a == q.a
 end
 
 Poly(n::Number, var::Symbol=:x) = Poly([n], var)
@@ -192,15 +196,9 @@ a = [0//1 ,1//1 ,2//1]
 var = :x
 p = Poly(a, var)
 q = p * p
-
-
 r = Poly(a, var)
-for n = 1:20
-  r = r * p
-end
 
 
-s = rationalize(zeros[100])
 
 diff_p = zeros(typeof(p.a[1]), 100)
 diff_p[100] = 3
