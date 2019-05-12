@@ -28,6 +28,9 @@ struct Point{T}
 end
 ```
 
+- new メソッド
+実際に作る
+
 ## Array
 JuliaのArrayとVectorの関係も後でまとめる.
 

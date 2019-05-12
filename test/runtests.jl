@@ -1,3 +1,3 @@
-using Test, Galois
+using Test, Algebra
 
-@test isequal(Galois.p * Galois.p, Galois.q)
+@test isequal(Algbera.p * Algbera.p, Algebra.q)

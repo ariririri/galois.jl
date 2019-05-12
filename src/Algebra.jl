@@ -1,4 +1,4 @@
-module Galois
+module Algebra
 
 include("polynomial.jl")
 
